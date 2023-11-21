@@ -6,15 +6,34 @@
   <!-- displays site properly based on user's device -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./sass/style.css">
   <title>Frontend Mentor | Advice generator app</title>
 </head>
 
 <body>
-
-  Advice #<!-- Advice ID goes here -->
-
-  "<!-- Advice text goes here -->"
-
+  <div class="mainContainer">
+    <div class="adviceContainer">
+      <h1 id="headling" class="header">Advice #177<!-- Advice ID goes here --></h1>
+      <p id="advice" class="message">
+        "It is easy to sit up and take notice, what's difficult is getting up and taking action.
+        <!-- Advice text goes here -->"
+      </p>
+      <picture>
+        <!--
+          <source media="(min-width:480px)" srcset="./images/pattern-divider-mobile.svg">
+        <source media="(min-width:1440px )" srcset="./images/pattern-divider-desktop.svg">
+        -->
+        <img src="./images/pattern-divider-desktop.svg" class="pattern">
+      </picture>
+    </div>
+    <div class="imageContainer">
+      <img src="./images/icon-dice.svg" aria-label="hidden"">
+    </div>
+  </div>
 </body>
 
 </html>
