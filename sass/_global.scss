@@ -1,0 +1,34 @@
+@use "./variables" as v;
+
+body {
+  background-color: v.$darkBlue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: v.$fontFamily;
+}
+
+.mainContainer {
+  background-color: v.$darkGrayishBlue;
+  border-radius: 20px;
+  height: 340px;
+  max-width: 548px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  color: v.$neoGreen;
+  font-size: 16px;
+  text-align: center;
+}
+
+.message {
+  color: v.$lightCyan;
+  font-size: v.$fontSize;
+  font-weight: v.$fontWeight;
+  padding: 20px 50px 20px 50px;
+  text-align: center;
+}

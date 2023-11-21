@@ -1,0 +1,34 @@
+/* typography */
+/*colors */
+body {
+  background-color: hsl(218, 23%, 16%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+}
+
+.mainContainer {
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 20px;
+  height: 340px;
+  max-width: 548px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  color: hsl(150, 100%, 66%);
+  font-size: 16px;
+  text-align: center;
+}
+
+.message {
+  color: hsl(193, 38%, 86%);
+  font-size: 28px;
+  font-weight: 800;
+  padding: 20px 50px 20px 50px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
