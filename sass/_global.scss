@@ -6,6 +6,14 @@ body {
   align-items: center;
   justify-content: center;
   font-family: v.$fontFamily;
+
+  @include v.mobile {
+    margin: 0px 20px 0px 20px;
+  }
+}
+
+picture {
+  padding: 20px 50px 20px 50px;
 }
 
 .mainContainer {
@@ -19,14 +27,18 @@ body {
   flex-direction: column;
 }
 
-picture {
-  padding: 20px 50px 20px 50px;
+.adviceContainer {
+  padding-top: 50px;
 }
 
 .header {
   color: v.$neoGreen;
   font-size: 16px;
   text-align: center;
+
+  @include v.mobile {
+    padding-bottom: 20px;
+  }
 }
 
 .message {
@@ -35,4 +47,25 @@ picture {
   font-weight: v.$fontWeight;
   padding: 20px 50px 20px 50px;
   text-align: center;
+
+  @include v.mobile {
+    padding: 10px;
+  }
+}
+
+.imageContainer {
+  background-color: v.$neoGreen;
+  border-radius: 50%;
+  position: relative;
+  top: 20px;
+
+  @include v.mobile {
+    top: 5px;
+  }
+}
+
+.icon {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 }
