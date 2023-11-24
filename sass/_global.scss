@@ -6,6 +6,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: v.$fontFamily;
+  flex-direction: column;
 
   @include v.mobile {
     margin: 0px 20px 0px 20px;
@@ -25,10 +26,6 @@ picture {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.adviceContainer {
-  padding-top: 50px;
 }
 
 .header {
@@ -57,11 +54,7 @@ picture {
   background-color: v.$neoGreen;
   border-radius: 50%;
   position: relative;
-  top: 20px;
-
-  @include v.mobile {
-    top: 5px;
-  }
+  bottom: 40px;
 }
 
 .icon {
