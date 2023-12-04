@@ -1,5 +1,6 @@
 const headerElement = document.getElementById("headling");
 const adviceElement = document.getElementById("advice");
+const buttonElement = document.getElementsByClassName("imageContainer")[0];
 const api = "https://api.adviceslip.com/advice";
 const apiEndPoint = async () => {
 	try {
@@ -15,3 +16,9 @@ const apiEndPoint = async () => {
 };
 
 apiEndPoint();
+
+buttonElement.addEventListener("click", () =>
+	setTimeout(() => {
+		apiEndPoint();
+	}, 2000)
+);
