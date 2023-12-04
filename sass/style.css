@@ -58,6 +58,9 @@ picture {
   border-radius: 50%;
   position: relative;
   bottom: 40px;
+  height: 64px;
+  width: 64px;
+  margin: auto;
 }
 
 .icon {
