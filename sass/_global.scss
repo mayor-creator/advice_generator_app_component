@@ -51,13 +51,20 @@ picture {
 }
 
 .imageContainer {
-  background-color: v.$neoGreen;
-  border-radius: 50%;
   position: relative;
   bottom: 40px;
   height: 64px;
   width: 64px;
   margin: auto;
+}
+
+.button {
+  background-color: v.$neoGreen;
+  border-radius: 50%;
+  border: none;
+  height: 64px;
+  width: 64px;
+  cursor: pointer;
 }
 
 .icon {
