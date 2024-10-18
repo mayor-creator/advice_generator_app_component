@@ -1,24 +1,29 @@
-const headerElement = document.getElementById("headling");
+const headerElement = document.getElementById("heading");
 const adviceElement = document.getElementById("advice");
-const buttonElement = document.getElementsByClassName("imageContainer")[0];
+const btn = document.getElementById("btn");
+
+let adviceData;
 const api = "https://api.adviceslip.com/advice";
 const apiEndPoint = async () => {
 	try {
 		const apiResponse = await fetch(api);
-		if (apiResponse.ok) {
-			const jsonResponse = await apiResponse.json();
-			headerElement.innerHTML = `ADVICE #${jsonResponse.slip.id}`;
-			adviceElement.innerHTML = `\"${jsonResponse.slip.advice}\"`;
+		if (!apiResponse.ok) {
+			throw newError("API request failed");
 		}
+		const jsonResponse = await apiResponse.json();
+		adviceData = jsonResponse.slip;
+		headerElement.innerHTML = `Advice #${adviceData.id}`;
+		adviceElement.innerHTML = `\"${adviceData.advice}\"`;
 	} catch (error) {
-		console.log(error);
+		console.error("Error fetching advice:", error);
 	}
 };
 
-apiEndPoint();
-
-buttonElement.addEventListener("click", () =>
-	setTimeout(() => {
+btn.addEventListener("click", () => {
+	if (!adviceData) {
 		apiEndPoint();
-	}, 2000)
-);
+	} else {
+		headerElement.innerHTML = `ADVICE #${adviceData.id}`;
+		adviceElement.innerHTML = `\"${adviceData.advice}\"`;
+	}
+});
