@@ -10,17 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./reset.css">
-  <link rel="stylesheet" href="./sass/style.css">
+  <link rel="stylesheet" href="./dist/style.css">
   <title>Frontend Mentor | Advice generator app</title>
+  <script defer src="./app/index.js"></script>
 </head>
 
 <body>
   <main>
     <div class="mainContainer">
       <div class="adviceContainer">
-        <h1 id="headling" class="header"><!--Advice ID goes here --></h1>
+        <h1 id="heading" class="header">Advice #117</h1>
         <p id="advice" class="message">
-          "<!-- Advice text goes here -->"
+          "It is easy to sit up and take notice, what's difficult is getting up and taking action"
         </p>
         <picture>
           <source srcset="./images/pattern-divider-mobile.svg" media="(max-width:480px)" />
@@ -30,10 +31,11 @@
       </div>
     </div>
     <div class="imageContainer">
-      <img src="./images/icon-dice.svg" class="icon" aria-label="hidden">
+      <button id="btn" class="button">
+        <img src="./images/icon-dice.svg" class="icon" aria-label="hidden">
+      </button>
     </div>
   </main>
-  <script src="./app/index.js"></script>
 </body>
 
 </html>
